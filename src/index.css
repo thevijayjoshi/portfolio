@@ -1,8 +1,105 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap");
+@import "tailwindcss";
+
+/* ===== Tailwind v4: Class-based dark mode ===== */
+@variant dark (&:where(.dark, .dark *));
+
+/* ===== Tailwind v4: Register theme colors from CSS variables ===== */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-border: var(--card-border);
+  --color-card-hover: var(--card-hover);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-light: var(--primary-light);
+  --color-muted: var(--muted);
+  --color-muted-light: var(--muted-light);
+  --color-section-alt: var(--section-alt);
+  --color-nav-bg: var(--nav-bg);
+  --color-badge-bg: var(--badge-bg);
+  --color-badge-text: var(--badge-text);
+  --color-timeline-line: var(--timeline-line);
+  --color-gradient-start: var(--gradient-from);
+  --color-gradient-end: var(--gradient-to);
+
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* ===== Light Theme Variables (default) ===== */
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --card: #f8fafc;
+  --card-border: #e2e8f0;
+  --card-hover: #f1f5f9;
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --primary-light: #dbeafe;
+  --muted: #64748b;
+  --muted-light: #94a3b8;
+  --section-alt: #f1f5f9;
+  --gradient-from: #3b82f6;
+  --gradient-to: #8b5cf6;
+  --nav-bg: rgba(255, 255, 255, 0.8);
+  --timeline-line: #e2e8f0;
+  --badge-bg: #f1f5f9;
+  --badge-text: #334155;
+}
+
+/* ===== Dark Theme Variables ===== */
+.dark {
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --card: #1e293b;
+  --card-border: #475569;
+  --card-hover: #273549;
+  --primary: #60a5fa;
+  --primary-hover: #93c5fd;
+  --primary-light: #1e3a5f;
+  --muted: #94a3b8;
+  --muted-light: #64748b;
+  --section-alt: #111827;
+  --gradient-from: #60a5fa;
+  --gradient-to: #a78bfa;
+  --nav-bg: rgba(15, 23, 42, 0.8);
+  --timeline-line: #334155;
+  --badge-bg: #1e293b;
+  --badge-text: #cbd5e1;
+}
+
+/* ===== Base Styles ===== */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
 body {
-  margin: 0;
-  font-family: "Raleway", serif !important;
+  font-family: var(--font-sans);
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35));
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted-light);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
 }
