@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vijay Joshi | Full-Stack Software Engineer</title>
+    <meta name="description" content="Software Engineer with 3+ years building production healthcare SaaS: React, TypeScript, NestJS, PostgreSQL, Kafka and generative AI on AWS Bedrock." />
+    <meta name="author" content="Vijay Joshi" />
+    <link rel="canonical" href="https://vijayjoshi.vercel.app/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b1029" media="(prefers-color-scheme: dark)" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://vijayjoshi.vercel.app/" />
+    <meta property="og:title" content="Vijay Joshi | Full-Stack Software Engineer" />
+    <meta property="og:description" content="Production healthcare SaaS: EHR, telehealth and billing. React, TypeScript, NestJS, PostgreSQL, Kafka, AWS Bedrock." />
+    <meta property="og:image" content="https://vijayjoshi.vercel.app/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="627" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+
+    <script>
+      // Apply the saved or system theme before first paint, so dark-mode visitors don't see a light flash.
+      var theme = "dark";
+      try {
+        theme = localStorage.getItem("theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      } catch (e) {}
+      document.documentElement.classList.add(theme);
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Vijay Joshi",
+        "url": "https://vijayjoshi.vercel.app/",
+        "jobTitle": "Software Engineer (Full Stack)",
+        "worksFor": { "@type": "Organization", "name": "Thinkitive Technologies" },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "Savitribai Phule Pune University" },
+        "address": { "@type": "PostalAddress", "addressLocality": "Pune", "addressCountry": "IN" },
+        "sameAs": ["https://www.linkedin.com/in/the-vijay-joshi", "https://github.com/thevijayjoshi"]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
